@@ -1,15 +1,16 @@
 defmodule ElixirFeedParser.Mixfile do
+
   use Mix.Project
 
   def project do
     [app: :elixir_feed_parser,
      version: "1.2.0",
      elixir: "~> 1.0",
-     description: description,
-     package: package,
+     description: description(),
+     package: package(),
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     deps: deps()]
   end
 
   # Configuration for the OTP application
@@ -29,7 +30,7 @@ defmodule ElixirFeedParser.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:timex, "~> 2.1.0"}]
+    [{:timex, "~> 3.0"}]
   end
 
   defp description do
